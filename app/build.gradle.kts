@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.smedina.dive_log_app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.smedina.dive_log_app"
