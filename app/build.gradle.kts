@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.plugin)
 }
 
 android {
@@ -28,6 +29,9 @@ android {
                 "proguard-rules.pro"
             )
         }
+        debug{
+            applicationIdSuffix = ".debug"
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -50,6 +54,10 @@ android {
 }
 
 dependencies {
+
+    /* Google-Services*/
+    implementation(platform(libs.google.service.bom))
+    implementation(libs.firebase.analytic)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
