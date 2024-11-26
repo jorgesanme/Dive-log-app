@@ -58,6 +58,7 @@ dependencies {
     /* Google-Services*/
     implementation(platform(libs.google.service.bom))
     implementation(libs.firebase.analytic)
+    implementation(libs.firebase.realtimedatabase)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
