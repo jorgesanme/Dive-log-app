@@ -1,15 +1,18 @@
 [versions]
-agp = "8.5.2"
-kotlin = "1.9.0"
+agp = "8.7.3"
+kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.11.00"
+composeBom = "2024.12.01"
+
+hilt = "2.51.1"
+hilt-navigation = "1.2.0"
 google-service = "4.4.2"
-google-service-bom = "33.6.0"
+google-services-bom = "33.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,12 +29,22 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-google-service-bom = {group = "com.google.firebase", name ="firebase-bom", version.ref ="google-service-bom"}
-firebase-analytic = {group = "com.google.firebase", name ="firebase-analytics"}
-firebase-realtimedatabase = {group = "com.google.firebase", name = "firebase-database"}
+
+# Google-Services
+google-service-bom = {group = "com.google.firebase", name ="firebase-bom", version.ref ="google-services-bom"}
+firebase-analytic = {group = "com.google.firebase", name ="firebase-analytics-ktx"}
+firebase-realtimedatabase = {group = "com.google.firebase", name = "firebase-database-ktx"}
+firebase-store = {group = "com.google.firebase", name = "firebase-storage-ktx"}
+
+# Dagger-Hilt
+dagger-hilt-android = {group = "com.google.dagger", name ="hilt-android", version.ref ="hilt"}
+dagger-hilt-compiler = {group = "com.google.dagger", name ="hilt-android-compiler", version.ref ="hilt"}
+dagger-hilt-navigation = {group = "androidx.hilt", name ="hilt-navigation-compose", version.ref ="hilt-navigation"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-plugin = {id ="com.google.gms.google-services", version.ref = "google-service" }
+google-services = {id ="com.google.gms.google-services", version.ref = "google-service" }
+
+dagger-hill = { id = "com.google.dagger.hilt.android",  version.ref = "hilt"}
 

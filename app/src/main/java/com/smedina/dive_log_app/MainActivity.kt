@@ -19,8 +19,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.smedina.dive_log_app.data.FirebaseInstance
 import com.smedina.dive_log_app.ui.theme.DivelogappTheme
+import com.smedina.dive_log_app.ui.user.UserImage
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+
     private lateinit var firebaseInstance: FirebaseInstance
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +35,8 @@ class MainActivity : ComponentActivity() {
             firebaseInstance = FirebaseInstance(context)
             DivelogappTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    ){
-                        firebaseInstance.writeOnFireBase()
-                    }
+                    UserImage(modifier = Modifier.padding(innerPadding))
+                    Greeting("chaaacho!!") {firebaseInstance.writeOnFireBase() }
                 }
             }
         }
