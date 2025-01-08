@@ -24,4 +24,6 @@ class GenerateFileUri( private val context: Context) {
         val name: String = SimpleDateFormat("yyyyMMdd_hhmmss").format(Date())+"_"
         return  File.createTempFile(name, "_UserImage.jpg", context.externalCacheDir)
     }
+
+
 }

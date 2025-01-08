@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.google.services)
     alias(libs.plugins.dagger.hill)
     id("kotlin-kapt")
+    alias(libs.plugins.jetbrains.kotlinx.serialization)
 }
 
 android {
@@ -70,6 +71,16 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     implementation(libs.dagger.hilt.navigation)
     kapt(libs.dagger.hilt.compiler)
+
+    /** Navigation*/
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    /** Coil*/
+    implementation(libs.coil.image)
+    implementation(libs.coil.http)
+
+    implementation(libs.image.compressor)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

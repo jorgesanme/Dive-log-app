@@ -4,8 +4,9 @@ import android.content.Context
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import javax.inject.Inject
 
-class FirebaseInstance(context: Context) {
+class FirebaseInstance @Inject constructor(private val context: Context) {
 
     private val database = Firebase.database
     private val databaseRef = database.reference

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dive-log-app</string>
+    <string name="dialog_title">"From Where "</string>
 </resources>
