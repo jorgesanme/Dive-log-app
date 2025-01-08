@@ -61,7 +61,7 @@ fun MainNavigationBottomBar() {
             composable(Screen.Main.route) { MainScreen()  }
             composable(Screen.Detail.route) { DetailScreen()  }
             composable(Screen.Map.route) { MapScreen()  }
-            composable(Screen.User.route) { UserImageScreen(modifier = Modifier)  }
+            composable(Screen.User.route) { UserImageScreen()  }
         }
 
     }
