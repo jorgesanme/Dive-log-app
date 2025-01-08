@@ -1,13 +1,22 @@
 [versions]
-agp = "8.5.1"
-kotlin = "1.9.0"
+agp = "8.7.3"
+kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.12.01"
+
+hilt = "2.51.1"
+hilt-navigation = "1.2.0"
+google-service = "4.4.2"
+google-services-bom = "33.7.0"
+navigationCompose = "2.8.5"
+kotlinSerialization = "1.6.3"
+coil-version = "3.0.4"
+image-compressor = "3.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +33,31 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-navigation-compose ={group = "androidx.navigation", name ="navigation-compose", version.ref = "navigationCompose"}
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name ="kotlinx-serialization-json", version.ref ="kotlinSerialization"}
+
+
+# Google-Services
+google-service-bom = {group = "com.google.firebase", name ="firebase-bom", version.ref ="google-services-bom"}
+firebase-analytic = {group = "com.google.firebase", name ="firebase-analytics-ktx"}
+firebase-realtimedatabase = {group = "com.google.firebase", name = "firebase-database-ktx"}
+firebase-store = {group = "com.google.firebase", name = "firebase-storage-ktx"}
+
+# Dagger-Hilt
+dagger-hilt-android = {group = "com.google.dagger", name ="hilt-android", version.ref ="hilt"}
+dagger-hilt-compiler = {group = "com.google.dagger", name ="hilt-android-compiler", version.ref ="hilt"}
+dagger-hilt-navigation = {group = "androidx.hilt", name ="hilt-navigation-compose", version.ref ="hilt-navigation"}
+
+#Coil
+coil-image = {group = "io.coil-kt.coil3", name ="coil-compose", version.ref = "coil-version" }
+coil-http = {group = "io.coil-kt.coil3", name ="coil-network-okhttp", version.ref="coil-version"}
+image-compressor = {group = "id.zelory", name ="compressor", version.ref ="image-compressor"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-services = {id ="com.google.gms.google-services", version.ref = "google-service" }
+
+dagger-hill = { id = "com.google.dagger.hilt.android",  version.ref = "hilt"}
+jetbrains-kotlinx-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
 
